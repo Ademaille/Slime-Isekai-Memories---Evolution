@@ -1,0 +1,30 @@
+{
+  "name": "evolution",
+  "version": "1.0.0",
+  "description": "Suivi des personnages",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.evolution.tracker",
+    "files": [
+      "**/*"
+    ],
+    "asar": true,
+    "asarUnpack": [
+      "**/node_modules/electron-store/**/*"
+    ],
+    "win": {
+      "target": "portable"
+    }
+  },
+  "dependencies": {
+    "electron-store": "^8.1.0"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.0"
+  }
+}
